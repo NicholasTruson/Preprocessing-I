@@ -50,10 +50,102 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
     height: 100%;
 }
+//* variables
 
+@header-font: 'Inconsolata', monospace;
+@h2-color: #385178;
+@p-font: 'PT Mono', monospace;
+
+//* Mixin's
+
+.uppercase(){
+	text-transform: uppercase;
+}
+
+.contentflex(){
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1%;
+	font-family: @header-font;
+	font-size: 1.5rem;
+	justify-content: space-between;
+	@media (max-width: 500px) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+header nav a {
+	text-decoration: none;
+	color: @h2-color;
+}
+
+.img {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 5%;
+}
+
+h2 {
+	font-family: @header-font;
+	font-size:1.5rem;
+	text-decoration: underline;
+	color: @h2-color;
+	margin: 1%;
+	.uppercase();
+}
+
+p {
+	font-family: @p-font;
+	font-size: 1.2rem;
+	margin: 1%;
+	line-height: 1.1;
+}
+
+.intro {
+	.contentflex();
+
+}
+
+.skills {
+	.contentflex();
+
+}
+
+.work {
+	.contentflex();
+
+}
+
+.contact {
+	.contentflex();
+}
+
+.footer {
+	.contentflex();
+	margin-top: 10%;
+	.uppercase();
+}
